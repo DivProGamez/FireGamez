@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!-- Page language set to English, direction Left-to-Right -->
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beat Dash: Run Game 2026</title>
+    
+    <!-- Importing Google Fonts: Using 'Poppins' for a modern and clean look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- Color variables for easy theme modification --- */
+        :root {
+            --primary-color: #FFA726; /* Vibrant Orange */
+            --secondary-color: #FF7043; /* Deeper Orange */
+            --dark-bg: #18191A;      /* Very Dark Grey Background */
+            --light-bg: #242526;     /* Lighter Grey for sections */
+            --text-color: #E4E6EB;   /* Light Grey Text */
+            --border-color: #3A3B3C; /* Subtle border color */
+        }
+
+        /* --- Global Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            text-align: center;
+            line-height: 1.7;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+        
+        h1, h2 {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        /* --- Header Section --- */
+        header {
+            padding: 2.5rem 0;
+        }
+
+        header h1 {
+            font-size: clamp(2.5rem, 6vw, 3.5rem); /* Responsive font size */
+            color: var(--primary-color);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding: 2rem 0 4rem 0;
+        }
+
+        .hero p.description {
+            font-size: clamp(1rem, 2.5vw, 1.1rem);
+            max-width: 700px;
+            margin: 1.5rem auto 2.5rem auto;
+            color: #B0B3B8; /* Slightly darker text for contrast */
+        }
+
+        .hero-image-placeholder {
+            width: 100%;
+            max-width: 800px;
+            aspect-ratio: 16 / 9; /* Maintain aspect ratio for the main image */
+            background-color: var(--light-bg);
+            border: 2px solid var(--border-color);
+            margin: 2rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+            font-size: 1.2rem;
+            color: #888;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: #18191A;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: clamp(1.1rem, 4vw, 1.3rem);
+            padding: 16px 45px;
+            text-decoration: none;
+            border-radius: 50px;
+            text-transform: uppercase;
+            margin-top: 1rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border: none;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* --- "Available On" Section --- */
+        .available-on {
+            background-color: var(--light-bg);
+            padding: 3.5rem 0;
+            margin-top: 3rem;
+        }
+        
+        .available-on h2 {
+            font-size: clamp(1.5rem, 5vw, 2rem);
+            margin-bottom: 2.5rem;
+            color: var(--text-color);
+        }
+
+        .devices {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: clamp(3rem, 10vw, 6rem);
+            flex-wrap: wrap;
+        }
+
+        .device {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            font-weight: 600;
+        }
+
+        .device-icon {
+            font-size: clamp(3.5rem, 8vw, 4.5rem); /* Responsive icon size */
+            margin-bottom: 0.75rem;
+            color: var(--text-color);
+        }
+        
+        /* --- Screenshots Gallery Section --- */
+        .gallery {
+            padding: 5rem 0;
+        }
+        
+        .gallery h2 {
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            margin-bottom: 2.5rem;
+        }
+
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .screenshot-placeholder {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background-color: var(--light-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .screenshot-placeholder:hover{
+            transform: scale(1.04);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* --- Footer Section --- */
+        footer {
+            padding: 2.5rem 0;
+            margin-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <!-- You can replace this text with your game logo image if you want -->
+            <h1>Beat Dash: Run Game 2026</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Hero Section: Main banner and call to action -->
+        <section class="hero">
+            <!-- Replace this element with your main game image (16:9 aspect ratio is recommended) -->
+            <div class="hero-image-placeholder">
+                <p>Main Game Image Here</p>
+            </div>
+            
+            <!-- Write a short and catchy description for your game here -->
+            <p class="description">
+                Embark on an unparalleled musical adventure! Dodge obstacles, collect notes, and achieve the highest scores to the rhythm of exciting music. Are you ready for the challenge?
+            </p>
+            
+            <!-- This button links directly to your game on the Amazon Appstore -->
+            <a href="https://www.amazon.com/Beat-Dash-Run-Game-2026/dp/B0DRZS6N5S" class="cta-button" target="_blank" rel="noopener noreferrer">
+                Download Now
+            </a>
+        </section>
+
+        <!-- Available On Section -->
+        <section class="available-on">
+            <div class="container">
+                <h2>Available On</h2>
+                <div class="devices">
+                    <div class="device">
+                        <span class="device-icon">📺</span>
+                        <p>Fire TV</p>
+                    </div>
+                    <div class="device">
+                        <span class="device-icon">📱</span>
+                        <p>Tablets</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshots Gallery Section -->
+        <section class="gallery">
+            <h2>Game Screenshots</h2>
+            <div class="screenshots-grid">
+                <!-- Replace these elements with actual screenshots from your game -->
+                <div class="screenshot-placeholder"><p>Screenshot 1</p></div>
+                <div class="screenshot-placeholder"><p>Screenshot 2</p></div>
+                <div class="screenshot-placeholder"><p>Screenshot 3</p></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- Change the year and your developer/studio name here -->
+            <p>&copy; 2025 - All rights reserved by [Your Developer or Studio Name].</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
