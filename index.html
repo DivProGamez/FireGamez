@@ -79,13 +79,10 @@
             background-color: var(--light-bg);
             border: 2px solid var(--border-color);
             margin: 2rem auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: block; /* Changed from flex to block for img tag */
             border-radius: 16px;
-            font-size: 1.2rem;
-            color: #888;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            object-fit: cover; /* Ensures the image covers the area without distortion */
         }
 
         .cta-button {
@@ -167,13 +164,10 @@
             background-color: var(--light-bg);
             border: 1px solid var(--border-color);
             border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #888;
-            font-size: 1.1rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: block; /* Changed from flex to block for img tag */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            object-fit: cover; /* Ensures the image covers the area without distortion */
         }
         .screenshot-placeholder:hover{
             transform: scale(1.04);
@@ -204,10 +198,8 @@
     <main class="container">
         <!-- Hero Section: Main banner and call to action -->
         <section class="hero">
-            <!-- Replace this element with your main game image (16:9 aspect ratio is recommended) -->
-            <div class="hero-image-placeholder">
-                <p>Main Game Image Here</p>
-            </div>
+            <!-- **EDITED:** Replaced div with img tag. Use this filename format. -->
+            <img src="images/hero-banner.jpg" alt="Beat Dash game main banner" class="hero-image-placeholder">
             
             <!-- Write a short and catchy description for your game here -->
             <p class="description">
@@ -241,10 +233,10 @@
         <section class="gallery">
             <h2>Game Screenshots</h2>
             <div class="screenshots-grid">
-                <!-- Replace these elements with actual screenshots from your game -->
-                <div class="screenshot-placeholder"><p>Screenshot 1</p></div>
-                <div class="screenshot-placeholder"><p>Screenshot 2</p></div>
-                <div class="screenshot-placeholder"><p>Screenshot 3</p></div>
+                <!-- **EDITED:** Replaced divs with img tags. Use this filename format. -->
+                <img src="images/screenshot-01.jpg" alt="Gameplay screenshot 1" class="screenshot-placeholder">
+                <img src="images/screenshot-02.jpg" alt="Gameplay screenshot 2" class="screenshot-placeholder">
+                <img src="images/screenshot-03.jpg" alt="Gameplay screenshot 3" class="screenshot-placeholder">
             </div>
         </section>
 
