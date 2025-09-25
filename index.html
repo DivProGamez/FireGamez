@@ -5,53 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>واجهة العمل التجاري – Hrajem Saadia (Independent Developer)</title>
 
-  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --primary-color:#FFA726;   /* Orange */
-      --secondary-color:#FF7043; /* Deeper Orange */
-      --dark-bg:#18191A;
-      --light-bg:#242526;
-      --text-color:#E4E6EB;
-      --border-color:#3A3B3C;
-      --muted:#B0B3B8;
-      --accent:#22d3ee;
+      --primary-color:#FFA726; --secondary-color:#FF7043;
+      --dark-bg:#18191A; --light-bg:#242526; --text-color:#E4E6EB;
+      --border-color:#3A3B3C; --muted:#B0B3B8; --accent:#22d3ee;
     }
     *{margin:0;padding:0;box-sizing:border-box}
-    body{
-      font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      background:var(--dark-bg);
-      color:var(--text-color);
-      line-height:1.75;
-      overflow-x:hidden;
-      text-align: start;
-    }
+    body{font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--dark-bg);color:var(--text-color);line-height:1.75;overflow-x:hidden;text-align:start}
     .container{max-width:1200px;margin:auto;padding:0 20px}
     h1,h2{font-weight:700;letter-spacing:1px}
     header{padding:2.5rem 0;border-bottom:1px solid var(--border-color)}
     header h1{font-size:clamp(2rem,5vw,2.6rem);color:var(--primary-color);text-transform:uppercase}
     header .sub{color:var(--muted);margin-top:.35rem;font-weight:600}
 
-    .card{
-      background:var(--light-bg);
-      border:1px solid var(--border-color);
-      border-radius:16px;
-      padding:24px;
-      margin:24px auto;
-      box-shadow:0 10px 30px rgba(0,0,0,.25);
-    }
-    .hero{
-      padding:2rem 0 0 0;
-    }
-    .hero .banner{
-      width:100%;max-width:900px;aspect-ratio:16/9;
-      background:#1f2021;border:2px solid var(--border-color);border-radius:16px;
-      margin:1rem auto 1.5rem auto;overflow:hidden;display:block;
-    }
+    .card{background:var(--light-bg);border:1px solid var(--border-color);border-radius:16px;padding:24px;margin:24px auto;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .hero{padding:2rem 0 0 0}
+    .hero .banner{width:100%;max-width:900px;aspect-ratio:16/9;background:#1f2021;border:2px solid var(--border-color);border-radius:16px;margin:1rem auto 1.5rem auto;overflow:hidden;display:block}
     .hero .banner img{width:100%;height:100%;object-fit:cover;display:block}
     .note{color:var(--muted);margin-top:.75rem}
     .grid{display:grid;gap:16px}
@@ -60,19 +34,11 @@
     ul.info{list-style:disc;padding-inline-start:22px}
     ul.info li{margin:.5rem 0}
 
-    .cta{
-      display:inline-block;background:linear-gradient(45deg,var(--primary-color),var(--secondary-color));
-      color:#18191A;font-weight:700;font-size:clamp(1rem,3.5vw,1.15rem);
-      padding:14px 32px;border-radius:40px;text-decoration:none;margin-top:.6rem;
-      transition:transform .2s ease, box-shadow .2s ease;box-shadow:0 4px 15px rgba(0,0,0,.25);
-    }
+    .cta{display:inline-block;background:linear-gradient(45deg,var(--primary-color),var(--secondary-color));color:#18191A;font-weight:700;font-size:clamp(1rem,3.5vw,1.15rem);padding:14px 32px;border-radius:40px;text-decoration:none;margin-top:.6rem;transition:transform .2s ease, box-shadow .2s ease;box-shadow:0 4px 15px rgba(0,0,0,.25)}
     .cta:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(0,0,0,.35)}
 
     .links{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:10px}
-    .link-tile{
-      display:block;padding:16px;border:1px solid var(--border-color);border-radius:12px;background:#1f2021;
-      text-decoration:none;color:var(--text-color)
-    }
+    .link-tile{display:block;padding:16px;border:1px solid var(--border-color);border-radius:12px;background:#1f2021;text-decoration:none;color:var(--text-color)}
     .link-tile:hover{border-color:var(--accent)}
     .small{font-size:.95rem}
     footer{padding:2rem 0;margin-top:1.5rem;border-top:1px solid var(--border-color);color:#aaa;text-align:center}
@@ -82,7 +48,6 @@
 </head>
 <body>
 
-  <!-- Header -->
   <header>
     <div class="container">
       <h1>Hrajem Saadia</h1>
@@ -92,16 +57,14 @@
 
   <main class="container">
 
-    <!-- Hero / Short intro -->
+    <!-- Hero -->
     <section class="hero card">
-      <!-- بانر اختياري (يمكن تغيير الصورة أو حذفها) -->
       <a class="banner" href="https://www.amazon.com/s?i=mobile-apps&rh=p_4%3AUltraFire%2BTv&search-type=ss" target="_blank" rel="noopener">
         <img src="https://raw.githubusercontent.com/DivProGamez/AmzGamezTop/refs/heads/main/hero-banner.jpg" alt="UltraFire Tv banner">
       </a>
 
       <p class="small">
-        هذه الصفحة تمثّل <strong>واجهة العمل التجاري</strong> الخاصة بي لأغراض التحقق لدى الجهات المالية.
-        أنا مطوّر مستقل أقوم بتصميم وتطوير ونشر تطبيقات وألعاب ترفيهية لأجهزة
+        هذه الصفحة تمثّل <strong>واجهة العمل التجاري</strong> الخاصة بي لأغراض التحقق. أنا مطوّر مستقل أنشر تطبيقات وألعاب لأجهزة
         <strong>Amazon Fire TV</strong> و<strong>Fire Tablet</strong> على <strong>Amazon Appstore</strong>.
       </p>
       <p class="small en">
@@ -109,13 +72,14 @@
       </p>
     </section>
 
-    <!-- معلومات مطلوبة من Payoneer -->
+    <!-- معلومات مطلوبة -->
     <section class="card">
       <h2>المعلومات الأساسية</h2>
       <div class="grid">
         <ul class="info">
           <li><strong>الاسم الكامل:</strong> Hrajem Saadia</li>
-          <li><strong>البريد الإلكتروني:</strong> <a href="mailto:saadbenchkr@gmail.com">saadbenchkr@gmail.com</a></li>
+          <li><strong>البريد الإلكتروني للتواصل العام:</strong> <a href="mailto:saadbenchkr@gmail.com">saadbenchkr@gmail.com</a></li>
+          <li><strong>البريد الإلكتروني الظاهر على Amazon Appstore (Developer info):</strong> <a href="mailto:devmemazz@gmail.com">devmemazz@gmail.com</a></li>
           <li><strong>رقم الهاتف:</strong> +212 669495247</li>
         </ul>
         <ul class="info">
@@ -125,25 +89,24 @@
         </ul>
       </div>
       <p class="note">
-        تُطابق البيانات أعلاه معلومات الهوية والعنوان المقدّمة لجهة الدفع.
+        ذُكر أعلاه البريد الإلكتروني التجاري <strong>devmemazz@gmail.com</strong> لأنه هو المعروض في قسم <em>Developer info</em> على صفحات منتجات Amazon، بينما يُستخدم
+        <strong>saadbenchkr@gmail.com</strong> كبريد دعم عام. كلاهما يخصّني ويُستعملان لنشاط واحد.
       </p>
     </section>
 
-    <!-- وصف السلع/الخدمات -->
+    <!-- وصف الخدمات -->
     <section class="card">
       <h2>وصف السلع/الخدمات المقدمة</h2>
       <p>
-        تطوير ونشر تطبيقات وألعاب ترفيهية موجّهة لأجهزة Amazon Fire TV وFire Tablet، بما يشمل:
-        برمجة التطبيقات، دعم التحكم عبر الريموت والجيمباد، تكامل المشتريات داخل التطبيق (IAP) والإشعارات،
-        ونشر التحديثات والتحسينات بشكل مستمر.
+        تطوير ونشر تطبيقات وألعاب ترفيهية لأجهزة Amazon Fire TV وFire Tablet، بما يشمل برمجة التطبيقات،
+        دعم التحكم عبر الريموت والجيمباد، تكامل المشتريات داخل التطبيق (IAP) والإشعارات،
+        وإصدار تحديثات وتحسينات دورية.
       </p>
       <hr style="border:none;border-top:1px solid var(--border-color);margin:14px 0">
-      <p class="small en">
-        <strong>English:</strong> I build and ship entertainment apps and games for Amazon Fire TV/Tablet with in-app purchases, push notifications, and remote/gamepad support.
-      </p>
+      <p class="small en"><strong>English:</strong> I build and ship entertainment apps and games for Amazon Fire TV/Tablet with in-app purchases, push notifications, and remote/gamepad support.</p>
     </section>
 
-    <!-- روابط المتجر/الدليل -->
+    <!-- روابط المتجر -->
     <section class="card">
       <h2>روابط تثبت النشاط على المتجر</h2>
       <div class="links">
@@ -156,14 +119,14 @@
          href="https://www.amazon.com/s?i=mobile-apps&rh=p_4%3AUltraFire%2BTv&search-type=ss">
         فتح صفحة التطبيقات على Amazon
       </a>
-      <p class="note">الرابط يوضح قائمة التطبيقات الحالية المنشورة تحت UltraFire Tv.</p>
+      <p class="note">يعرض الرابط أعلاه قائمة التطبيقات المنشورة حاليًا تحت الحساب UltraFire Tv.</p>
     </section>
 
     <!-- تواصل -->
     <section class="card">
       <h2>التواصل والدعم</h2>
-      <p>للاستفسار: <a href="mailto:saadbenchkr@gmail.com">saadbenchkr@gmail.com</a></p>
-      <p class="small"><a href="privacy.html">سياسة الخصوصية</a> (اختياري).</p>
+      <p>الدعم العام: <a href="mailto:saadbenchkr@gmail.com">saadbenchkr@gmail.com</a></p>
+      <p class="small">البريد الظاهر على Amazon: <a href="mailto:devmemazz@gmail.com">devmemazz@gmail.com</a></p>
     </section>
 
   </main>
