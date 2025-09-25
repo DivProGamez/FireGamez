@@ -1,279 +1,179 @@
 <!DOCTYPE html>
-<!-- Page language set to English, direction Left-to-Right -->
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beat Dash: Run Game 2026</title>
-    
-    <!-- Importing Google Fonts: Using 'Poppins' for a modern and clean look -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        /* --- Color variables for easy theme modification --- */
-        :root {
-            --primary-color: #FFA726; /* Vibrant Orange */
-            --secondary-color: #FF7043; /* Deeper Orange */
-            --dark-bg: #18191A;      /* Very Dark Grey Background */
-            --light-bg: #242526;     /* Lighter Grey for sections */
-            --text-color: #E4E6EB;   /* Light Grey Text */
-            --border-color: #3A3B3C; /* Subtle border color */
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>واجهة العمل التجاري – Hrajem Saadia (Independent Developer)</title>
 
-        /* --- Global Styles --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--text-color);
-            text-align: center;
-            line-height: 1.7;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
-        }
+  <style>
+    :root{
+      --primary-color:#FFA726;   /* Orange */
+      --secondary-color:#FF7043; /* Deeper Orange */
+      --dark-bg:#18191A;
+      --light-bg:#242526;
+      --text-color:#E4E6EB;
+      --border-color:#3A3B3C;
+      --muted:#B0B3B8;
+      --accent:#22d3ee;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:var(--dark-bg);
+      color:var(--text-color);
+      line-height:1.75;
+      overflow-x:hidden;
+      text-align: start;
+    }
+    .container{max-width:1200px;margin:auto;padding:0 20px}
+    h1,h2{font-weight:700;letter-spacing:1px}
+    header{padding:2.5rem 0;border-bottom:1px solid var(--border-color)}
+    header h1{font-size:clamp(2rem,5vw,2.6rem);color:var(--primary-color);text-transform:uppercase}
+    header .sub{color:var(--muted);margin-top:.35rem;font-weight:600}
 
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 0 20px;
-        }
-        
-        h1, h2 {
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
+    .card{
+      background:var(--light-bg);
+      border:1px solid var(--border-color);
+      border-radius:16px;
+      padding:24px;
+      margin:24px auto;
+      box-shadow:0 10px 30px rgba(0,0,0,.25);
+    }
+    .hero{
+      padding:2rem 0 0 0;
+    }
+    .hero .banner{
+      width:100%;max-width:900px;aspect-ratio:16/9;
+      background:#1f2021;border:2px solid var(--border-color);border-radius:16px;
+      margin:1rem auto 1.5rem auto;overflow:hidden;display:block;
+    }
+    .hero .banner img{width:100%;height:100%;object-fit:cover;display:block}
+    .note{color:var(--muted);margin-top:.75rem}
+    .grid{display:grid;gap:16px}
+    @media(min-width:820px){.grid{grid-template-columns:1fr 1fr}}
 
-        /* --- Header Section --- */
-        header {
-            padding: 2.5rem 0;
-        }
+    ul.info{list-style:disc;padding-inline-start:22px}
+    ul.info li{margin:.5rem 0}
 
-        header h1 {
-            font-size: clamp(2.5rem, 6vw, 3.5rem); /* Responsive font size */
-            color: var(--primary-color);
-        }
+    .cta{
+      display:inline-block;background:linear-gradient(45deg,var(--primary-color),var(--secondary-color));
+      color:#18191A;font-weight:700;font-size:clamp(1rem,3.5vw,1.15rem);
+      padding:14px 32px;border-radius:40px;text-decoration:none;margin-top:.6rem;
+      transition:transform .2s ease, box-shadow .2s ease;box-shadow:0 4px 15px rgba(0,0,0,.25);
+    }
+    .cta:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(0,0,0,.35)}
 
-        /* --- Hero Section --- */
-        .hero {
-            padding: 2rem 0 4rem 0;
-        }
-
-        .hero p.description {
-            font-size: clamp(1rem, 2.5vw, 1.1rem);
-            max-width: 700px;
-            margin: 1.5rem auto 2.5rem auto;
-            color: #B0B3B8; /* Slightly darker text for contrast */
-        }
-
-        .hero-image-placeholder {
-            width: 100%;
-            max-width: 800px;
-            aspect-ratio: 16 / 9; /* Maintain aspect ratio for the main image */
-            background-color: var(--light-bg);
-            border: 2px solid var(--border-color);
-            margin: 2rem auto;
-            display: block; /* Changed from flex to block for img tag */
-            border-radius: 16px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-            overflow: hidden; /* Ensures image stays within rounded corners */
-        }
-
-        /* NEW RULE: Styles the image inside the hero link */
-        .hero-image-placeholder img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            color: #18191A;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            font-size: clamp(1.1rem, 4vw, 1.3rem);
-            padding: 16px 45px;
-            text-decoration: none;
-            border-radius: 50px;
-            text-transform: uppercase;
-            margin-top: 1rem;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            border: none;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        }
-        
-        /* --- "Available On" Section --- */
-        .available-on {
-            background-color: var(--light-bg);
-            padding: 3.5rem 0;
-            margin-top: 3rem;
-        }
-        
-        .available-on h2 {
-            font-size: clamp(1.5rem, 5vw, 2rem);
-            margin-bottom: 2.5rem;
-            color: var(--text-color);
-        }
-
-        .devices {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: clamp(3rem, 10vw, 6rem);
-            flex-wrap: wrap;
-        }
-
-        .device {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: clamp(1rem, 3vw, 1.2rem);
-            font-weight: 600;
-        }
-
-        .device-icon {
-            font-size: clamp(3.5rem, 8vw, 4.5rem); /* Responsive icon size */
-            margin-bottom: 0.75rem;
-            color: var(--text-color);
-        }
-        
-        /* --- Screenshots Gallery Section --- */
-        .gallery {
-            padding: 5rem 0;
-        }
-        
-        .gallery h2 {
-            font-size: clamp(2rem, 5vw, 2.5rem);
-            margin-bottom: 2.5rem;
-        }
-
-        .screenshots-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .screenshot-placeholder {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            background-color: var(--light-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            display: block; /* Changed from flex to block for img tag */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            overflow: hidden; /* Ensures image stays within rounded corners */
-        }
-        .screenshot-placeholder:hover{
-            transform: scale(1.04);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        }
-        
-        /* NEW RULE: Styles images inside the screenshot links */
-        .screenshot-placeholder img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* --- Footer Section --- */
-        footer {
-            padding: 2.5rem 0;
-            margin-top: 2rem;
-            border-top: 1px solid var(--border-color);
-            font-size: 0.9rem;
-            color: #888;
-        }
-    </style>
+    .links{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:10px}
+    .link-tile{
+      display:block;padding:16px;border:1px solid var(--border-color);border-radius:12px;background:#1f2021;
+      text-decoration:none;color:var(--text-color)
+    }
+    .link-tile:hover{border-color:var(--accent)}
+    .small{font-size:.95rem}
+    footer{padding:2rem 0;margin-top:1.5rem;border-top:1px solid var(--border-color);color:#aaa;text-align:center}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+  </style>
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <!-- You can replace this text with your game logo image if you want -->
-            <h1>Beat Dash: Run Game 2026</h1>
-        </div>
-    </header>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Hrajem Saadia</h1>
+      <div class="sub">مطوّر مستقل (Independent Developer) — UltraFire Tv</div>
+    </div>
+  </header>
 
-    <!-- Main Content -->
-    <main class="container">
-        <!-- Hero Section: Main banner and call to action -->
-        <section class="hero">
-            <!-- **EDITED:** Image is now a clickable link. Class moved to <a> tag. -->
-            <a href="https://www.amazon.com/NewGamesOne-Hopping-Brainrot-Run-Game/dp/B0FP1CTCPL" target="_blank" rel="noopener noreferrer" class="hero-image-placeholder">
-                <img src="https://raw.githubusercontent.com/DivProGamez/AmzGamezTop/refs/heads/main/hero-banner.jpg" alt="Beat Dash game main banner">
-            </a>
-            
-            <!-- Write a short and catchy description for your game here -->
-            <p class="description">
-                Embark on an unparalleled musical adventure! Dodge obstacles, collect notes, and achieve the highest scores to the rhythm of exciting music. Are you ready for the challenge?
-            </p>
-            
-            <!-- This button links directly to your game on the Amazon Appstore -->
-            <a href="https://www.amazon.com/NewGamesOne-Hopping-Brainrot-Run-Game/dp/B0FP1CTCPL" class="cta-button" target="_blank" rel="noopener noreferrer">
-                Download Now
-            </a>
-        </section>
+  <main class="container">
 
-        <!-- Available On Section -->
-        <section class="available-on">
-            <div class="container">
-                <h2>Available On</h2>
-                <div class="devices">
-                    <div class="device">
-                        <span class="device-icon">📺</span>
-                        <p>Fire TV</p>
-                    </div>
-                    <div class="device">
-                        <span class="device-icon">📱</span>
-                        <p>Tablets</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- Hero / Short intro -->
+    <section class="hero card">
+      <!-- بانر اختياري (يمكن تغيير الصورة أو حذفها) -->
+      <a class="banner" href="https://www.amazon.com/s?i=mobile-apps&rh=p_4%3AUltraFire%2BTv&search-type=ss" target="_blank" rel="noopener">
+        <img src="https://raw.githubusercontent.com/DivProGamez/AmzGamezTop/refs/heads/main/hero-banner.jpg" alt="UltraFire Tv banner">
+      </a>
 
-        <!-- Screenshots Gallery Section -->
-        <section class="gallery">
-            <h2>Game Screenshots</h2>
-            <div class="screenshots-grid">
-                <!-- **EDITED:** Images are now clickable links. Class moved to <a> tags. -->
-                <a href="https://www.amazon.com/NewGamesOne-Hopping-Brainrot-Run-Game/dp/B0FP1CTCPL" target="_blank" rel="noopener noreferrer" class="screenshot-placeholder">
-                    <img src="https://raw.githubusercontent.com/DivProGamez/AmzGamezTop/refs/heads/main/screenshot-01.jpg" alt="Gameplay screenshot 1">
-                </a>
-                <a href="https://www.amazon.com/NewGamesOne-Hopping-Brainrot-Run-Game/dp/B0FP1CTCPL" target="_blank" rel="noopener noreferrer" class="screenshot-placeholder">
-                    <img src="https://raw.githubusercontent.com/DivProGamez/AmzGamezTop/refs/heads/main/screenshot-02.jpg" alt="Gameplay screenshot 2">
-                </a>
-                <a href="https://www.amazon.com/NewGamesOne-Hopping-Brainrot-Run-Game/dp/B0FP1CTCPL" target="_blank" rel="noopener noreferrer" class="screenshot-placeholder">
-                    <img src="https://raw.githubusercontent.com/DivProGamez/AmzGamezTop/refs/heads/main/screenshot-03.jpg" alt="Gameplay screenshot 3">
-                </a>
-            </div>
-        </section>
+      <p class="small">
+        هذه الصفحة تمثّل <strong>واجهة العمل التجاري</strong> الخاصة بي لأغراض التحقق لدى الجهات المالية.
+        أنا مطوّر مستقل أقوم بتصميم وتطوير ونشر تطبيقات وألعاب ترفيهية لأجهزة
+        <strong>Amazon Fire TV</strong> و<strong>Fire Tablet</strong> على <strong>Amazon Appstore</strong>.
+      </p>
+      <p class="small en">
+        <strong>English brief:</strong> I am an independent developer. I create and publish entertainment apps and games for Amazon Fire TV and Fire Tablet on the Amazon Appstore. This page is my official business presence for verification.
+      </p>
+    </section>
 
-    </main>
+    <!-- معلومات مطلوبة من Payoneer -->
+    <section class="card">
+      <h2>المعلومات الأساسية</h2>
+      <div class="grid">
+        <ul class="info">
+          <li><strong>الاسم الكامل:</strong> Hrajem Saadia</li>
+          <li><strong>البريد الإلكتروني:</strong> <a href="mailto:saadbenchkr@gmail.com">saadbenchkr@gmail.com</a></li>
+          <li><strong>رقم الهاتف:</strong> +212 669495247</li>
+        </ul>
+        <ul class="info">
+          <li><strong>العنوان الأساسي:</strong> anassi ext grop 7, entree 12 n 128 sidi bernoussi</li>
+          <li><strong>المدينة/الرمز البريدي:</strong> Casablanca 20630</li>
+          <li><strong>الدولة:</strong> Morocco</li>
+        </ul>
+      </div>
+      <p class="note">
+        تُطابق البيانات أعلاه معلومات الهوية والعنوان المقدّمة لجهة الدفع.
+      </p>
+    </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <!-- Change the year and your developer/studio name here -->
-            <p>&copy; 2025 - All rights reserved by [Your Developer or Studio Name].</p>
-        </div>
-    </footer>
+    <!-- وصف السلع/الخدمات -->
+    <section class="card">
+      <h2>وصف السلع/الخدمات المقدمة</h2>
+      <p>
+        تطوير ونشر تطبيقات وألعاب ترفيهية موجّهة لأجهزة Amazon Fire TV وFire Tablet، بما يشمل:
+        برمجة التطبيقات، دعم التحكم عبر الريموت والجيمباد، تكامل المشتريات داخل التطبيق (IAP) والإشعارات،
+        ونشر التحديثات والتحسينات بشكل مستمر.
+      </p>
+      <hr style="border:none;border-top:1px solid var(--border-color);margin:14px 0">
+      <p class="small en">
+        <strong>English:</strong> I build and ship entertainment apps and games for Amazon Fire TV/Tablet with in-app purchases, push notifications, and remote/gamepad support.
+      </p>
+    </section>
 
+    <!-- روابط المتجر/الدليل -->
+    <section class="card">
+      <h2>روابط تثبت النشاط على المتجر</h2>
+      <div class="links">
+        <a class="link-tile" target="_blank" rel="noopener"
+           href="https://www.amazon.com/s?i=mobile-apps&rh=p_4%3AUltraFire%2BTv&search-type=ss">
+          التطبيقات المنشورة على Amazon Appstore (UltraFire Tv)
+        </a>
+      </div>
+      <a class="cta" target="_blank" rel="noopener"
+         href="https://www.amazon.com/s?i=mobile-apps&rh=p_4%3AUltraFire%2BTv&search-type=ss">
+        فتح صفحة التطبيقات على Amazon
+      </a>
+      <p class="note">الرابط يوضح قائمة التطبيقات الحالية المنشورة تحت UltraFire Tv.</p>
+    </section>
+
+    <!-- تواصل -->
+    <section class="card">
+      <h2>التواصل والدعم</h2>
+      <p>للاستفسار: <a href="mailto:saadbenchkr@gmail.com">saadbenchkr@gmail.com</a></p>
+      <p class="small"><a href="privacy.html">سياسة الخصوصية</a> (اختياري).</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="y"></span> Hrajem Saadia — UltraFire Tv. جميع الحقوق محفوظة.
+    </div>
+  </footer>
+
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
-
