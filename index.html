@@ -1,142 +1,84 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>واجهة العمل التجاري – Hrajem Saadia (Independent Developer)</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
+  <title>Business Info - Hrajem Saadia</title>
   <style>
-    :root{
-      --primary-color:#FFA726; --secondary-color:#FF7043;
-      --dark-bg:#18191A; --light-bg:#242526; --text-color:#E4E6EB;
-      --border-color:#3A3B3C; --muted:#B0B3B8; --accent:#22d3ee;
+    body {
+      font-family: Arial, sans-serif;
+      background: #fafafa;
+      color: #222;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
     }
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--dark-bg);color:var(--text-color);line-height:1.75;overflow-x:hidden;text-align:start}
-    .container{max-width:1200px;margin:auto;padding:0 20px}
-    h1,h2{font-weight:700;letter-spacing:1px}
-    header{padding:2.5rem 0;border-bottom:1px solid var(--border-color)}
-    header h1{font-size:clamp(2rem,5vw,2.6rem);color:var(--primary-color);text-transform:uppercase}
-    header .sub{color:var(--muted);margin-top:.35rem;font-weight:600}
-
-    .card{background:var(--light-bg);border:1px solid var(--border-color);border-radius:16px;padding:24px;margin:24px auto;box-shadow:0 10px 30px rgba(0,0,0,.25)}
-    .hero{padding:2rem 0 0 0}
-    .hero .banner{width:100%;max-width:900px;aspect-ratio:16/9;background:#1f2021;border:2px solid var(--border-color);border-radius:16px;margin:1rem auto 1.5rem auto;overflow:hidden;display:block}
-    .hero .banner img{width:100%;height:100%;object-fit:cover;display:block}
-    .note{color:var(--muted);margin-top:.75rem}
-    .grid{display:grid;gap:16px}
-    @media(min-width:820px){.grid{grid-template-columns:1fr 1fr}}
-
-    ul.info{list-style:disc;padding-inline-start:22px}
-    ul.info li{margin:.5rem 0}
-
-    .cta{display:inline-block;background:linear-gradient(45deg,var(--primary-color),var(--secondary-color));color:#18191A;font-weight:700;font-size:clamp(1rem,3.5vw,1.15rem);padding:14px 32px;border-radius:40px;text-decoration:none;margin-top:.6rem;transition:transform .2s ease, box-shadow .2s ease;box-shadow:0 4px 15px rgba(0,0,0,.25)}
-    .cta:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(0,0,0,.35)}
-
-    .links{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:10px}
-    .link-tile{display:block;padding:16px;border:1px solid var(--border-color);border-radius:12px;background:#1f2021;text-decoration:none;color:var(--text-color)}
-    .link-tile:hover{border-color:var(--accent)}
-    .small{font-size:.95rem}
-    footer{padding:2rem 0;margin-top:1.5rem;border-top:1px solid var(--border-color);color:#aaa;text-align:center}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 25px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    h2 {
+      font-size: 1.2rem;
+      margin-top: 20px;
+      color: #444;
+    }
+    p, li {
+      font-size: 1rem;
+    }
+    ul {padding-left: 18px;}
+    a {color: #0073e6; text-decoration: none;}
+    a:hover {text-decoration: underline;}
+    footer {
+      margin-top: 30px;
+      font-size: 0.85rem;
+      color: #666;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
+  <div class="container">
+    <h1>Hrajem Saadia</h1>
+    <p>Independent developer publishing apps on Amazon Appstore.</p>
 
-  <header>
-    <div class="container">
-      <h1>Hrajem Saadia</h1>
-      <div class="sub">مطوّر مستقل (Independent Developer) — UltraFire Tv</div>
-    </div>
-  </header>
+    <h2>Contact Information</h2>
+    <ul>
+      <li><strong>Full Name:</strong> Hrajem Saadia</li>
+      <li><strong>Primary Email:</strong> saadbenchkr@gmail.com</li>
+      <li><strong>Amazon Developer Email:</strong> devmemazz@gmail.com</li>
+      <li><strong>Phone:</strong> +212 669495247</li>
+      <li><strong>Address:</strong> anassi ext grop 7, entree 12 n 128 sidi bernoussi, Casablanca 20630, Morocco</li>
+    </ul>
 
-  <main class="container">
+    <h2>Business Description</h2>
+    <p>
+      I develop and publish entertainment apps and games for Amazon Fire TV and Fire Tablet. 
+      My work includes app development, in-app purchases integration, push notifications, and remote/gamepad support.
+    </p>
 
-    <!-- Hero -->
-    <section class="hero card">
-      <a class="banner" href="https://www.amazon.com/s?i=mobile-apps&rh=p_4%3AUltraFire%2BTv&search-type=ss" target="_blank" rel="noopener">
-        <img src="https://raw.githubusercontent.com/DivProGamez/AmzGamezTop/refs/heads/main/hero-banner.jpg" alt="UltraFire Tv banner">
+    <h2>Amazon Store Link</h2>
+    <p>
+      <a href="https://www.amazon.com/s?i=mobile-apps&rh=p_4%3AUltraFire%2BTv&search-type=ss" target="_blank">
+        View my apps on Amazon Appstore (UltraFire Tv)
       </a>
+    </p>
 
-      <p class="small">
-        هذه الصفحة تمثّل <strong>واجهة العمل التجاري</strong> الخاصة بي لأغراض التحقق. أنا مطوّر مستقل أنشر تطبيقات وألعاب لأجهزة
-        <strong>Amazon Fire TV</strong> و<strong>Fire Tablet</strong> على <strong>Amazon Appstore</strong>.
-      </p>
-      <p class="small en">
-        <strong>English brief:</strong> I am an independent developer. I create and publish entertainment apps and games for Amazon Fire TV and Fire Tablet on the Amazon Appstore. This page is my official business presence for verification.
-      </p>
-    </section>
+    <footer>
+      © <span id="y"></span> Hrajem Saadia — All rights reserved.
+    </footer>
+  </div>
 
-    <!-- معلومات مطلوبة -->
-    <section class="card">
-      <h2>المعلومات الأساسية</h2>
-      <div class="grid">
-        <ul class="info">
-          <li><strong>الاسم الكامل:</strong> Hrajem Saadia</li>
-          <li><strong>البريد الإلكتروني للتواصل العام:</strong> <a href="mailto:saadbenchkr@gmail.com">saadbenchkr@gmail.com</a></li>
-          <li><strong>البريد الإلكتروني الظاهر على Amazon Appstore (Developer info):</strong> <a href="mailto:devmemazz@gmail.com">devmemazz@gmail.com</a></li>
-          <li><strong>رقم الهاتف:</strong> +212 669495247</li>
-        </ul>
-        <ul class="info">
-          <li><strong>العنوان الأساسي:</strong> anassi ext grop 7, entree 12 n 128 sidi bernoussi</li>
-          <li><strong>المدينة/الرمز البريدي:</strong> Casablanca 20630</li>
-          <li><strong>الدولة:</strong> Morocco</li>
-        </ul>
-      </div>
-      <p class="note">
-        ذُكر أعلاه البريد الإلكتروني التجاري <strong>devmemazz@gmail.com</strong> لأنه هو المعروض في قسم <em>Developer info</em> على صفحات منتجات Amazon، بينما يُستخدم
-        <strong>saadbenchkr@gmail.com</strong> كبريد دعم عام. كلاهما يخصّني ويُستعملان لنشاط واحد.
-      </p>
-    </section>
-
-    <!-- وصف الخدمات -->
-    <section class="card">
-      <h2>وصف السلع/الخدمات المقدمة</h2>
-      <p>
-        تطوير ونشر تطبيقات وألعاب ترفيهية لأجهزة Amazon Fire TV وFire Tablet، بما يشمل برمجة التطبيقات،
-        دعم التحكم عبر الريموت والجيمباد، تكامل المشتريات داخل التطبيق (IAP) والإشعارات،
-        وإصدار تحديثات وتحسينات دورية.
-      </p>
-      <hr style="border:none;border-top:1px solid var(--border-color);margin:14px 0">
-      <p class="small en"><strong>English:</strong> I build and ship entertainment apps and games for Amazon Fire TV/Tablet with in-app purchases, push notifications, and remote/gamepad support.</p>
-    </section>
-
-    <!-- روابط المتجر -->
-    <section class="card">
-      <h2>روابط تثبت النشاط على المتجر</h2>
-      <div class="links">
-        <a class="link-tile" target="_blank" rel="noopener"
-           href="https://www.amazon.com/s?i=mobile-apps&rh=p_4%3AUltraFire%2BTv&search-type=ss">
-          التطبيقات المنشورة على Amazon Appstore (UltraFire Tv)
-        </a>
-      </div>
-      <a class="cta" target="_blank" rel="noopener"
-         href="https://www.amazon.com/s?i=mobile-apps&rh=p_4%3AUltraFire%2BTv&search-type=ss">
-        فتح صفحة التطبيقات على Amazon
-      </a>
-      <p class="note">يعرض الرابط أعلاه قائمة التطبيقات المنشورة حاليًا تحت الحساب UltraFire Tv.</p>
-    </section>
-
-    <!-- تواصل -->
-    <section class="card">
-      <h2>التواصل والدعم</h2>
-      <p>الدعم العام: <a href="mailto:saadbenchkr@gmail.com">saadbenchkr@gmail.com</a></p>
-      <p class="small">البريد الظاهر على Amazon: <a href="mailto:devmemazz@gmail.com">devmemazz@gmail.com</a></p>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="container">
-      © <span id="y"></span> Hrajem Saadia — UltraFire Tv. جميع الحقوق محفوظة.
-    </div>
-  </footer>
-
-  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
