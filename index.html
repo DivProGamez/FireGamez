@@ -3,82 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Business Info - Hrajem Saadia</title>
+  <title>Hrajem Saadia - Developer Info</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #fafafa;
-      color: #222;
+      background: #18191A;
+      color: #E4E6EB;
+      margin: 0; padding: 0;
       line-height: 1.6;
-      margin: 0;
-      padding: 20px;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background: #fff;
-      padding: 25px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-    }
-    h1 {
-      font-size: 1.8rem;
-      margin-bottom: 10px;
-      color: #333;
-    }
-    h2 {
-      font-size: 1.2rem;
-      margin-top: 20px;
-      color: #444;
-    }
-    p, li {
-      font-size: 1rem;
-    }
-    ul {padding-left: 18px;}
-    a {color: #0073e6; text-decoration: none;}
-    a:hover {text-decoration: underline;}
-    footer {
-      margin-top: 30px;
-      font-size: 0.85rem;
-      color: #666;
       text-align: center;
     }
+    header {
+      padding: 2rem 1rem;
+      background: #242526;
+    }
+    header h1 {margin: 0; color: #FFA726;}
+    .banner {
+      max-width: 800px; margin: 1.5rem auto;
+      border-radius: 12px; overflow: hidden;
+      border: 2px solid #3A3B3C;
+    }
+    .banner img {width: 100%; display: block;}
+    .section {max-width: 850px; margin: 2rem auto; padding: 1rem;}
+    h2 {color: #FF7043; margin-bottom: 1rem;}
+    ul {list-style: none; padding: 0;}
+    li {margin: .5rem 0;}
+    a {color: #22d3ee; text-decoration: none;}
+    a:hover {text-decoration: underline;}
+    footer {margin-top: 2rem; padding: 1rem; font-size: .9rem; color: #aaa;}
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Hrajem Saadia</h1>
-    <p>Independent developer publishing apps on Amazon Appstore.</p>
 
-    <h2>Contact Information</h2>
-    <ul>
-      <li><strong>Full Name:</strong> Hrajem Saadia</li>
-      <li><strong>Primary Email:</strong> saadbenchkr@gmail.com</li>
-      <li><strong>Amazon Developer Email:</strong> devmemazz@gmail.com</li>
-      <li><strong>Phone:</strong> +212 669495247</li>
-      <li><strong>Address:</strong> anassi ext grop 7, entree 12 n 128 sidi bernoussi, Casablanca 20630, Morocco</li>
-    </ul>
+<header>
+  <h1>Hrajem Saadia</h1>
+  <p>Independent Developer — UltraFire Tv</p>
+</header>
 
-    <h2>Business Description</h2>
-    <p>
-      I develop and publish entertainment apps and games for Amazon Fire TV and Fire Tablet. 
-      My work includes app development, in-app purchases integration, push notifications, and remote/gamepad support.
-    </p>
+<div class="banner">
+  <img src="https://raw.githubusercontent.com/DivProGamez/AmzGamezTop/refs/heads/main/hero-banner.jpg" alt="Banner">
+</div>
 
-    <h2>Amazon Store Link</h2>
-    <p>
-      <a href="https://www.amazon.com/s?i=mobile-apps&rh=p_4%3AUltraFire%2BTv&search-type=ss" target="_blank">
-        View my apps on Amazon Appstore (UltraFire Tv)
-      </a>
-    </p>
+<div class="section">
+  <h2>Contact Info</h2>
+  <ul>
+    <li><strong>Full Name:</strong> Hrajem Saadia</li>
+    <li><strong>Email (main):</strong> saadbenchkr@gmail.com</li>
+    <li><strong>Email (Amazon):</strong> devmemazz@gmail.com</li>
+    <li><strong>Phone:</strong> +212 669495247</li>
+    <li><strong>Address:</strong> Casablanca 20630, Morocco</li>
+  </ul>
+</div>
 
-    <footer>
-      © <span id="y"></span> Hrajem Saadia — All rights reserved.
-    </footer>
-  </div>
+<div class="section">
+  <h2>Business Description</h2>
+  <p>
+    I develop and publish apps and games for Amazon Fire TV and Fire Tablet.
+    Focus on entertainment, in-app purchases, notifications, and remote/gamepad support.
+  </p>
+</div>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+<div class="section">
+  <h2>Amazon Store</h2>
+  <p>
+    <a href="https://www.amazon.com/s?i=mobile-apps&rh=p_4%3AUltraFire%2BTv&search-type=ss" target="_blank">
+      View my apps on Amazon Appstore
+    </a>
+  </p>
+</div>
+
+<footer>
+  © <span id="y"></span> Hrajem Saadia — UltraFire Tv
+</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
