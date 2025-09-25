@@ -22,8 +22,24 @@
       max-width: 800px; margin: 1.5rem auto;
       border-radius: 12px; overflow: hidden;
       border: 2px solid #3A3B3C;
+      display: block;
     }
     .banner img {width: 100%; display: block;}
+    .btn {
+      display: inline-block;
+      margin: 1rem auto;
+      padding: 12px 28px;
+      background: linear-gradient(45deg,#FFA726,#FF7043);
+      color: #18191A;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0,0,0,.3);
+    }
     .section {max-width: 850px; margin: 2rem auto; padding: 1rem;}
     h2 {color: #FF7043; margin-bottom: 1rem;}
     ul {list-style: none; padding: 0;}
@@ -37,12 +53,15 @@
 
 <header>
   <h1>Hrajem Saadia</h1>
-  <p>Independent Developer — UltraFire Tv</p>
 </header>
 
-<div class="banner">
+<!-- Banner with Amazon link -->
+<a href="https://www.amazon.com/s?i=mobile-apps&rh=p_4%3AUltraFire%2BTv&search-type=ss" target="_blank" class="banner">
   <img src="https://raw.githubusercontent.com/DivProGamez/AmzGamezTop/refs/heads/main/hero-banner.jpg" alt="Banner">
-</div>
+</a>
+
+<!-- Button under banner -->
+<a class="btn" href="https://www.amazon.com/s?i=mobile-apps&rh=p_4%3AUltraFire%2BTv&search-type=ss" target="_blank">View on Amazon</a>
 
 <div class="section">
   <h2>Contact Info</h2>
@@ -59,18 +78,11 @@
   <h2>Business Description</h2>
   <p>
     I develop and publish apps and games for Amazon Fire TV and Fire Tablet.
-    Focus on entertainment, in-app purchases, notifications, and remote/gamepad support.
   </p>
 </div>
 
-<div class="section">
-  <h2>Amazon Store</h2>
-  <p>
-    <a href="https://www.amazon.com/s?i=mobile-apps&rh=p_4%3AUltraFire%2BTv&search-type=ss" target="_blank">
-      View my apps on Amazon Appstore
-    </a>
-  </p>
-</div>
+<!-- Second Amazon button at the bottom -->
+<a class="btn" href="https://www.amazon.com/s?i=mobile-apps&rh=p_4%3AUltraFire%2BTv&search-type=ss" target="_blank">My Amazon Store</a>
 
 <footer>
   © <span id="y"></span> Hrajem Saadia — UltraFire Tv
